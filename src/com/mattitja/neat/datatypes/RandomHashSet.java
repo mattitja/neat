@@ -1,6 +1,9 @@
+package com.mattitja.neat.datatypes;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
+// TODO lets inherit from hash set
 public class RandomHashSet<T> {
 
 	private HashSet<T> set;
@@ -42,6 +45,4 @@ public class RandomHashSet<T> {
 	public ArrayList<T> getData() {
 		return data;
 	}
-
-
 }

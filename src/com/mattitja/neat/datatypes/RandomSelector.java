@@ -1,3 +1,5 @@
+package com.mattitja.neat.datatypes;
+
 import java.util.ArrayList;
 
 public class RandomSelector<T> {
