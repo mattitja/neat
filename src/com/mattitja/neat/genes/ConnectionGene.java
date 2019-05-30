@@ -2,12 +2,17 @@ package com.mattitja.neat.genes;
 
 import com.mattitja.neat.neat.Neat;
 
-public class ConnectionGene {
+public class ConnectionGene extends Gene {
 
 	private NodeGene from;
 	private NodeGene to;
 	private double weight;
 	private boolean enabled;
+
+	public ConnectionGene(NodeGene from, NodeGene to) {
+		this.from = from;
+		this.to = to;
+	}
 
 	public NodeGene getFrom() {
 		return from;
@@ -53,5 +58,12 @@ public class ConnectionGene {
 	// assuring we always get NEW innovation numbers
 	public int hashCode() {
 		return from.getInnovationNumber() * Neat.MAX_NODES + to.getInnovationNumber();
+	}
+
+	public ConnectionGene copy(ConnectionGene original) {
+		ConnectionGene copy = new ConnectionGene(original.from, original.to);
+		copy.setEnabled(original.isEnabled());
+		copy.setWeight(original.getWeight());
+		return copy;
 	}
 }

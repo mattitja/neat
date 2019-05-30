@@ -4,6 +4,9 @@ public class Gene {
 
 	protected int innovationNumber;
 
+	public Gene() {
+	}
+
 	public Gene(int innovationNumber) {
 		this.innovationNumber = innovationNumber;
 	}
